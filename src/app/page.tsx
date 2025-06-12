@@ -4,7 +4,7 @@ export default function HomePage() {
 
   return (
     <div className={styles['page-start']}>
-      < div>asd</div>
+      < div>asds</div>
     </div>
   );
 }
