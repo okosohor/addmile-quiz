@@ -1,10 +1,13 @@
-import styles from '@/styles/page.module.css';
+'use client'
+import Game from '@/components/game/game';
+import { GameProvider } from '@/context/gameContext';
 
-export default function HomePage() {
+export default function Page() {
 
   return (
-    <div className={styles['page-start']}>
-      <div>asdssss</div>
-    </div>
-  );
+    <GameProvider>
+      <Game />
+    </GameProvider>
+  )
+
 }
