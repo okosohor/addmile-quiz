@@ -2,7 +2,7 @@ import styles from '@/styles/contentScreen.module.css';
 import Image from 'next/image';
 import Button from '@/components/button';
 import { useGameContext } from '@/context/gameContext';
-import questions from '@/data/questions';
+import questions from '@/data/questions.json';
 
 
 export default function ContentScreen() {
@@ -14,7 +14,7 @@ export default function ContentScreen() {
 
   const totalScore = questions.slice(0, currentQuestionIndex).reduce((acc, val) => (acc + val.price),0)
   const buttonText = isGameStarted ? 'Try again' : 'Start'
-  const contentText = isGameStarted ? `Earned ${totalScore}$`  : 'Who wants to be a millionaire?'
+  const contentText = isGameStarted ? `Earned ${totalScore.toLocaleString()}$`  : 'Who wants to be a millionaire?'
 
 
 

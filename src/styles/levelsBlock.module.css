@@ -1,11 +1,62 @@
-.container {
+.levels {
   background-color: white;
-  height: 100vh;
-  max-width: 376px;
+  padding-bottom: 32px;
+  padding-top: 64px;
   width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   overflow-y: scroll;
   gap: 8px;
+  max-height: calc(100vh - 64px - 32px);
+
+  min-height: calc(100vh - 64px - 32px);
+}
+
+@media (min-width: 550px) {
+  .container {
+    max-height: 100%;
+  }
+}
+
+.burger-menu-button {
+  right: 16px;
+  top: 16px;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 550px) {
+  .burger-menu-button {
+    display: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .levels {
+    padding-top: 64px;
+    max-width: 376px;
+    height: 100vh;
+  }
+}
+
+.hidden-mobile {
+  display: none;
+}
+
+@media (min-width: 550px) {
+  .hidden-mobile {
+    display: flex;
+  }
 }

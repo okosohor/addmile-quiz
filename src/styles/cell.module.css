@@ -36,6 +36,13 @@
 
 .cell-text {
   z-index: 2;
+  font-size: 16px;
+}
+
+@media (min-width: 550px) {
+  .cell-text {
+    font-size: 20px;
+  }
 }
 
 .cell-text--black {

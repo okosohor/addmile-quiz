@@ -1,5 +1,5 @@
 import { useGameContext } from '@/context/gameContext';
-import questions from '@/data/questions';
+import questions from '@/data/questions.json';
 import styles from '@/styles/bigCell.module.css';
 import { Answer } from '@/types/questions';
 import cn from 'classnames';
@@ -68,8 +68,6 @@ export default function Cell ({ isLastOdd, selectedAnswers, setSelectedAnswers, 
         <div className={styles['cell-bg']}>
           <span className={styles.letter}>{answer.letter}</span>
           <span className={styles.text}>{answer.text}</span>
-          {selectedAnswers.length }
-          {countOfCorrectAnswers}
         </div>
       </div>
     </button>

@@ -1,51 +1,39 @@
 import styles from '@/styles/gameInterface.module.css'
 import BigCell from '../bigCell';
-import questions from '@/data/questions';
-import { useState } from 'react';
+import questions from '@/data/questions.json';
+import { SetStateAction, useState } from 'react';
 import { Answer } from '@/types/questions';
+import Image from 'next/image';
+import cn from 'classnames';
 
-const mock = [
-  {
-    id:1,
-    letter: 'a',
-    text: 'asdasdasd',
-  },
-  {
-    id:2,
-    letter: 'b',
-    text: 'asdasdasd',
-  },
-  {
-    id:3,
-    letter: 'c',
-    text: 'asdasdasd',
-  },
-  {
-    id:4,
-    letter: 'd',
-    text: 'asdasdasd',
-  },
-
-  {
-    id:5,
-    letter: 'g',
-    text: 'asdasdasd',
-  },
-]
 
 interface Props {
   currentQuestionIndex: number
+  setBurgerMenuIsOpen: React.Dispatch<SetStateAction<boolean>>;
+  burgerMenuIsOpen: boolean;
 }
 
-export default function GameInterface({ currentQuestionIndex }: Props) {
+export default function GameInterface({ currentQuestionIndex, setBurgerMenuIsOpen, burgerMenuIsOpen }: Props) {
   const [selectedAnswers, setSelectedAnswers] = useState<Answer[]>([])
   
-  const isOdd = mock.length % 2 !== 0;
+  const isOdd = questions[currentQuestionIndex].answers.length % 2 !== 0;
   const currentQuestion = questions[currentQuestionIndex]
-  
 
+  function handleOpenMenu () {
+    setBurgerMenuIsOpen(prev=>!prev)
+  }
   return (
-    <div className={styles['game-screen']}>
+    <div className={cn(styles['game-screen'], {[styles['hidden-mobile']] : burgerMenuIsOpen})}>
+      <div className={styles['button-container']}>
+        <button onClick={handleOpenMenu} className={styles['burger-menu-button']}>
+          <Image 
+            height={14} 
+            width={14}
+            alt='bureg menu'
+            src={'/images/openMenu.svg'}
+          />
+        </button>
+      </div>
       <p className={styles['game-question']}>{currentQuestion.question}</p>
       <div className={styles['cell-container']}>
         
@@ -54,7 +42,7 @@ export default function GameInterface({ currentQuestionIndex }: Props) {
             countOfCorrectAnswers={currentQuestion.countOfCorrectAnswers}
             answer={answer} 
             key={index} 
-            isLastOdd={isOdd && index === mock.length - 1}
+            isLastOdd={isOdd && (index === questions[currentQuestionIndex].answers.length - 1) }
             setSelectedAnswers={setSelectedAnswers}
             selectedAnswers={selectedAnswers}
           />

@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "question": "How many products are included in Headway Inc.?",
+    "price": 500,
+    "countOfCorrectAnswers": 1,
+    "answers": [
+      { "letter": "A", "text": "1", "isCorrect": false },
+      { "letter": "B", "text": "3", "isCorrect": false },
+      { "letter": "C", "text": "5", "isCorrect": true },
+      { "letter": "D", "text": "8", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Which product is developed by Headway Inc.?",
+    "price": 1000,
+    "countOfCorrectAnswers": 3,
+    "answers": [
+      { "letter": "A", "text": "Impulse", "isCorrect": true },
+      { "letter": "B", "text": "Headway", "isCorrect": true },
+      { "letter": "C", "text": "AddMile", "isCorrect": true },
+      { "letter": "D", "text": "BetterMe", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "How many product & marketing A/B tests are conducted monthly at Headway Inc.?",
+    "price": 5000,
+    "countOfCorrectAnswers": 1,
+    "answers": [
+      { "letter": "A", "text": "50", "isCorrect": false },
+      { "letter": "B", "text": "100+", "isCorrect": true },
+      { "letter": "C", "text": "150+", "isCorrect": false },
+      { "letter": "D", "text": "200+", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What is the name of Headway Inc.'s first product?",
+    "price": 10000,
+    "countOfCorrectAnswers": 1,
+    "answers": [
+      { "letter": "A", "text": "Impulse", "isCorrect": false },
+      { "letter": "B", "text": "Headway", "isCorrect": true },
+      { "letter": "C", "text": "AddMile", "isCorrect": false },
+      { "letter": "D", "text": "Nibble", "isCorrect": false },
+      { "letter": "E", "text": "Skillsta", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What is Admile?",
+    "price": 20000,
+    "countOfCorrectAnswers": 1,
+    "answers": [
+      { "letter": "A", "text": "An online marketplace", "isCorrect": false },
+      { "letter": "B", "text": "A social media app", "isCorrect": false },
+      { "letter": "C", "text": "A coaching platform", "isCorrect": true },
+      { "letter": "D", "text": "A file storage service", "isCorrect": false }
+    ]
+  }
+]
