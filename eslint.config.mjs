@@ -26,7 +26,6 @@ const eslintConfig = [
       'no-console': ['warn', { 'allow': ['warn', 'error'] }],
       'no-return-await': 'error', 
       'no-throw-literal': 'error',
-      'no-extra-parens': ['error', 'all'], 
       'comma-dangle': ['error', 'always-multiline'],
       'no-redeclare': 'error',
       'no-useless-constructor': 'error',
@@ -39,6 +38,15 @@ const eslintConfig = [
       'array-callback-return': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-magic-numbers': ['warn', { 'ignore': [0, 1, -1] }],
+      'react/jsx-max-props-per-line': ['error', { 'maximum': 3 }],
+      'react/jsx-wrap-multilines': [
+        'error',
+        {
+          'declaration': true,
+          'assignment': true,
+          'return': true,
+        },
+      ],
     },
   },
 ];

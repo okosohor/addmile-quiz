@@ -5,6 +5,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #D0D0D8;
+}
+
+.active-cell {
+ color: #FF8B37;
+}
+
+.passed-cell {
+  color: #D0D0D8;
 }
 
 .cell-bg {
@@ -12,6 +21,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  color: currentColor;
 }
 
 .cell-line {
@@ -20,10 +30,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 0.5px solid #D0D0D8;
+  border: 0.5px solid currentColor;
   width: 100%;
 }
 
-.cell-text{
+.cell-text {
   z-index: 2;
+}
+
+.cell-text--black {
+  color: #1C1C21;
 }

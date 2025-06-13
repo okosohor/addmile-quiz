@@ -7,22 +7,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-
-.game-screen {
-  padding: 132px 0px 122px 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.game-question {
-  font-weight: 600;
-  font-size: 32px;
-}
-
-.cell-container {
-  width: 500px;
-  height: 200px;
-  background-color: green;
-}

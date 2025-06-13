@@ -1,0 +1,19 @@
+.game-screen {
+  padding: 132px 0px 122px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 60%;
+}
+
+.game-question {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.cell-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+}

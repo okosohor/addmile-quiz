@@ -1,14 +1,23 @@
 import style from '@/styles/levelsBlock.module.css'
 import Cell from '@/components/cell';
+import questions from '@/data/questions';
 
-export default function LevelsInfo() {
+interface Props {
+  currentQuestionIndex: number;
+}
+
+export default function LevelsInfo({ currentQuestionIndex }:Props) {
   return (
     <div className={style.container}>
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
+      {questions.map((question, i) =>  (
+        <Cell 
+          index={i} 
+          currentQuestionIndex={currentQuestionIndex} 
+          key={question.id}
+          price={question.price}
+        />
+      ),
+      )}
     </div>
   );
 }

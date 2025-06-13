@@ -1,10 +1,12 @@
-export interface Level {
+export interface Question {
+  id:number,
   question: string,
   price: number,
   answers: Answer[]
+  countOfCorrectAnswers: number,
 }
 
-interface Answer {
+export interface Answer {
   letter: string;
   text: string;
   isCorrect: boolean;
