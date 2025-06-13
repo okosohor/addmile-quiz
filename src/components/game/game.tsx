@@ -4,5 +4,9 @@ import ContentScreen from '../ContentScreen';
 
 export default function Game() {
   const { isGameStarted } = useGameContext();
-  return <>{isGameStarted ? <GameScreen /> : <ContentScreen />}</>;
+  return (
+    <>
+      {isGameStarted ? <GameScreen /> : <ContentScreen />}
+    </>
+  );
 }

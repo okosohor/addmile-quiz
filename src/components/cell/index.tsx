@@ -1,4 +1,4 @@
-import styles from '@/styles/cell.module.css'
+import styles from '@/styles/cell.module.css';
 import cn from 'classnames';
 
 interface Props {
@@ -9,8 +9,8 @@ interface Props {
 
 export default function Cell ({ price, currentQuestionIndex, index }:Props) {
   const isQuestionActive = currentQuestionIndex === index;
-  const isQuestionPassed = currentQuestionIndex > index
-  const isQuestionNext = currentQuestionIndex < index
+  const isQuestionPassed = currentQuestionIndex > index;
+  const isQuestionNext = currentQuestionIndex < index;
 
   return (
     <div className={cn(
@@ -32,5 +32,5 @@ export default function Cell ({ price, currentQuestionIndex, index }:Props) {
       </svg>
       <p className={cn(styles['cell-text'], {[styles['cell-text--black']]: isQuestionNext})}>{price.toLocaleString()}$</p>
     </div>
-  )
+  );
 }

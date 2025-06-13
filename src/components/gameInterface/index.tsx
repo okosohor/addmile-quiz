@@ -22,6 +22,7 @@ export default function GameInterface({ currentQuestionIndex, setBurgerMenuIsOpe
   function handleOpenMenu () {
     setBurgerMenuIsOpen(prev=>!prev);
   }
+  
   return (
     <div className={cn(styles['game-screen'], {[styles['hidden-mobile']] : burgerMenuIsOpen})}>
       <div className={styles['button-container']}>

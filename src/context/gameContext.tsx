@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { createContext, useContext, useState, ReactNode } from 'react';
 
 interface GameContextType {
@@ -36,8 +36,8 @@ export function GameProvider({ children }: GameProviderProps) {
 
   function endGame() {
     setIsGameStarted(false);
-    setCurrentQuestionIndex(0)
-    setIsGameFinished(false)
+    setCurrentQuestionIndex(0);
+    setIsGameFinished(false);
   }
 
   function finishGame(){
@@ -45,7 +45,7 @@ export function GameProvider({ children }: GameProviderProps) {
   }
 
   function setCurrentQuestion(index: number) {
-    setCurrentQuestionIndex(index)
+    setCurrentQuestionIndex(index);
   }
 
   return (

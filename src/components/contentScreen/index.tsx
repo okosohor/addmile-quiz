@@ -16,10 +16,7 @@ export default function ContentScreen() {
   const buttonText = isGameStarted ? 'Try again' : 'Start';
   const contentText = isGameStarted ? `Earned ${totalScore.toLocaleString()}$`  : 'Who wants to be a millionaire?';
 
-
-
   return (
-
     <div className={styles.page}>
       <div className={styles.background}/>
       <div className={styles.content}>
