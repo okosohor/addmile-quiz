@@ -9,6 +9,10 @@
   border: none;
 }
 
+.cell:disabled {
+  color: inherit;
+}
+
 @media (min-width: 550px) {
   .cell {
     height: 72px;
@@ -226,6 +230,3 @@
   }
 }
 
-button:disabled {
-  color: inherit;
-}
