@@ -1,5 +1,5 @@
 import styles from '@/styles/gameInterface.module.css';
-import BigCell from '../BigCell';
+import BigCell from '@/components/BigCell';
 import questions from '@/data/questions.json';
 import { SetStateAction, useState } from 'react';
 import { Answer } from '@/types/questions';
@@ -22,7 +22,7 @@ export default function GameInterface({ currentQuestionIndex, setBurgerMenuIsOpe
   function handleOpenMenu () {
     setBurgerMenuIsOpen(prev=>!prev);
   }
-  
+
   return (
     <div className={cn(styles['game-screen'], {[styles['hidden-mobile']] : burgerMenuIsOpen})}>
       <div className={styles['button-container']}>

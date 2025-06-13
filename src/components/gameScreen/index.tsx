@@ -1,7 +1,7 @@
 import styles from '@/styles/gameScreen.module.css';
-import ScreenContent from '../ContentScreen';
-import LevelsInfo from '../LevelsBlock';
-import GameInterface from '../GameInterface';
+import ScreenContent from '@/components/ContentScreen';
+import LevelsInfo from '@/components/LevelsBlock';
+import GameInterface from '@/components/GameInterface';
 import { useGameContext } from '@/context/gameContext';
 import { useState } from 'react';
 
