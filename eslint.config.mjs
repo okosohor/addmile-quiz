@@ -39,6 +39,7 @@ const eslintConfig = [
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-magic-numbers': ['warn', { 'ignore': [0, 1, -1] }],
       'react/jsx-max-props-per-line': ['error', { 'maximum': 3 }],
+      'semi': ['error', 'always'],
       'react/jsx-wrap-multilines': [
         'error',
         {

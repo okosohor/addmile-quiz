@@ -1,5 +1,5 @@
-import styles from '@/styles/gameInterface.module.css'
-import BigCell from '../bigCell';
+import styles from '@/styles/gameInterface.module.css';
+import BigCell from '../BigCell';
 import questions from '@/data/questions.json';
 import { SetStateAction, useState } from 'react';
 import { Answer } from '@/types/questions';
@@ -14,13 +14,13 @@ interface Props {
 }
 
 export default function GameInterface({ currentQuestionIndex, setBurgerMenuIsOpen, burgerMenuIsOpen }: Props) {
-  const [selectedAnswers, setSelectedAnswers] = useState<Answer[]>([])
+  const [selectedAnswers, setSelectedAnswers] = useState<Answer[]>([]);
   
   const isOdd = questions[currentQuestionIndex].answers.length % 2 !== 0;
-  const currentQuestion = questions[currentQuestionIndex]
+  const currentQuestion = questions[currentQuestionIndex];
 
   function handleOpenMenu () {
-    setBurgerMenuIsOpen(prev=>!prev)
+    setBurgerMenuIsOpen(prev=>!prev);
   }
   return (
     <div className={cn(styles['game-screen'], {[styles['hidden-mobile']] : burgerMenuIsOpen})}>

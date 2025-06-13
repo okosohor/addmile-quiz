@@ -1,5 +1,5 @@
-import styles from '@/styles/levelsBlock.module.css'
-import Cell from '@/components/cell';
+import styles from '@/styles/levelsBlock.module.css';
+import Cell from '@/components/Cell';
 import questions from '@/data/questions.json';
 import Image from 'next/image';
 import { SetStateAction } from 'react';
@@ -13,7 +13,7 @@ interface Props {
 
 export default function LevelsInfo({ currentQuestionIndex, setBurgerMenuIsOpen, burgerMenuIsOpen }:Props) {
   function handleClose() {
-    setBurgerMenuIsOpen(false)
+    setBurgerMenuIsOpen(false);
   }
   
   return (

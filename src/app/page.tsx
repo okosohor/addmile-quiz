@@ -1,5 +1,5 @@
-'use client'
-import Game from '@/components/game/game';
+'use client';
+import Game from '@/components/Game/game';
 import { GameProvider } from '@/context/gameContext';
 
 export default function Page() {
@@ -8,6 +8,6 @@ export default function Page() {
     <GameProvider>
       <Game />
     </GameProvider>
-  )
+  );
 
 }

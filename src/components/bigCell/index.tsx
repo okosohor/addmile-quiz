@@ -13,42 +13,41 @@ interface Props {
   countOfCorrectAnswers: number;
 }
 
-
 export default function Cell ({ isLastOdd, selectedAnswers, setSelectedAnswers, answer, countOfCorrectAnswers }: Props) {
   const { currentQuestionIndex, setCurrentQuestion, finishGame } = useGameContext();
   const [isAnswerFalse, setIsAnswerFalse] = useState(false);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
 
-  const isAnswerSelected = (selectedAnswers.find(item => (item.letter === answer.letter)) && selectedAnswers.length <= countOfCorrectAnswers && countOfCorrectAnswers > 1)
-
-  const isButtonDisabled = (!!selectedAnswers.find(item => (!item.isCorrect)) || selectedAnswers.length === countOfCorrectAnswers)
+  const isAnswerSelected = (selectedAnswers.find(item => (item.letter === answer.letter)) && selectedAnswers.length <= countOfCorrectAnswers && countOfCorrectAnswers > 1);
+  const isButtonDisabled = (!!selectedAnswers.find(item => (!item.isCorrect)) || selectedAnswers.length === countOfCorrectAnswers);
+  const delay = 2000;
 
   function nextStep () {
-    setCurrentQuestion(currentQuestionIndex + 1)
-    setSelectedAnswers([])
-    setIsAnswerCorrect(false)
+    setCurrentQuestion(currentQuestionIndex + 1);
+    setSelectedAnswers([]);
+    setIsAnswerCorrect(false);
   }
 
   function handleClick () {
-    setSelectedAnswers((prev)=>[...prev, answer])
+    setSelectedAnswers((prev)=>[...prev, answer]);
     if(answer.isCorrect) {
-      setIsAnswerCorrect(true)
+      setIsAnswerCorrect(true);
       if(currentQuestionIndex === questions.length - 1 ) 
       {
-        setTimeout(finishGame, 2000)
+        setTimeout(finishGame, delay);
       }
       if(selectedAnswers.length + 1 === countOfCorrectAnswers){
-        setTimeout(nextStep, 2000)
+        setTimeout(nextStep, delay);
       }
     } else {
-      setIsAnswerFalse(true)
-      setTimeout(finishGame, 2000)
+      setIsAnswerFalse(true);
+      setTimeout(finishGame, delay);
     }
   };
   useEffect(()=>{
-    setIsAnswerCorrect(false)
+    setIsAnswerCorrect(false);
 
-  },[currentQuestionIndex])
+  },[currentQuestionIndex]);
 
   return (
     <button disabled={isButtonDisabled} onClick={handleClick} className={cn(
@@ -71,5 +70,5 @@ export default function Cell ({ isLastOdd, selectedAnswers, setSelectedAnswers, 
         </div>
       </div>
     </button>
-  )
+  );
 }

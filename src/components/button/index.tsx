@@ -5,12 +5,11 @@ interface Props {
   handleButtonClick: () => void;
 }
 
-
 export default function Button({ text, handleButtonClick }: Props) {
-  
   function handleClick () {
-    handleButtonClick()
+    handleButtonClick();
   }
+  
   return (
     <div>
       <button onClick={handleClick} className={styles.button}>{text}</button>
