@@ -1,5 +1,5 @@
 import styles from '@/styles/gameScreen.module.css';
-import ScreenContent from '@/components/ContentScreen';
+import ContentScreen from '@/components/ContentScreen';
 import LevelsInfo from '@/components/LevelsBlock';
 import GameInterface from '@/components/GameInterface';
 import { useGameContext } from '@/context/gameContext';
@@ -11,7 +11,7 @@ export default function GameScreen() {
   return (
     <div className={styles.page}>
       {isGameFinished ? (
-        <ScreenContent />
+        <ContentScreen />
       ) : (
         <div className={styles.container}>
           <GameInterface
