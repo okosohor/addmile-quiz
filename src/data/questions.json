@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "question": "Which product is developed by Headway Inc.?",
+    "question": "Which products is developed by Headway Inc.?",
     "price": 1000,
     "countOfCorrectAnswers": 3,
     "answers": [
